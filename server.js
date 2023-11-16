@@ -2,8 +2,9 @@ const express = require("express");
 const path = require("path");
 
 var app = express();
-var server = app.listen(3000,function(){
-    console.log("Listening on port 3000");
+let port = process.env.PORT || 8000;
+var server = app.listen(port,function(){
+    //console.log("Listening on port 3000");
 });
 const fs = require('fs');
 const io = require("socket.io")(server);
